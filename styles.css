@@ -1,0 +1,167 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222831;
+}
+
+header {
+    width:100%;
+    height:5em;
+    background-color: #2d4059; 
+    color:#ff5722;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+
+#logo-image {
+    height:100%;
+}
+
+.header-div {
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height:100%;
+    margin-top: 15px;
+}
+
+.header-title{
+    font-size:1.7em;
+    width:100%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+nav {
+  color: #eeeeee; 
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 7px auto 0 auto;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #eeeeee;
+    padding: 4px;
+    border-radius: 2px;
+} 
+
+nav > a:hover {
+    background-color: #eeeeee; 
+    color: #2d4059;
+} 
+
+main { 
+    width: 90vw;
+    margin: 0 auto;
+    color: #eeeeee;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.info {
+    padding-top:5em;
+    border-bottom: 2px solid #2d4059;
+}
+
+.h2-others {
+    padding-top:2em;
+    border-bottom: 2px solid #2d4059;
+}
+
+.info-div {
+    display: flex;
+}
+
+#info-image {
+    width: 40%;
+    object-fit: fill;
+}
+
+#text-div {
+    display:flex;
+    flex-direction: column;
+}
+
+.text {
+    padding-left: 13px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    margin-top:10px;
+}
+
+.text:first-of-type{
+    margin-top:0;
+}
+
+.name {
+    font-style: italic;
+    margin-top:-0.5px;
+    color: #ff5722; 
+}
+
+.indent {
+    margin-left: 0.5em;
+}
+
+.bold {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.info-div-2 {
+    margin-top: 15px;
+    text-align: justify;
+    word-spacing: -0.1em;
+    letter-spacing: -0.2px;
+}
+
+.info-div-3 {
+    margin-top: 25px;
+    text-align: justify;
+    align-items: center;
+}
+
+.bold2 {
+        font-weight: bold;
+        font-size: 1.2em;
+        color: #ff5722;
+        text-align: center;
+}
+
+.center {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.divider {
+    border: 0.5px solid #2d4059;
+}
+
+#imdb-link {
+    color:#ff5722;
+    text-decoration: none;
+    padding: 4px;
+}
+
+#imdb-link:hover, #imdb-link:visited:hover {
+    color: #2d4059;
+    text-decoration: none;
+    background-color: #ff5722;
+    border-radius: 2px;
+}
+
+#imdb-link:visited {
+    color: #ff5722;
+}
+
+.no-left-padding {
+    padding-left: 0;
+}
