@@ -7,7 +7,8 @@
         <meta name="description" content="freeCodeCamp project number 2 - tribute page about my favourite movie">
         <title>My Favourite Movie</title>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="mediaqueries.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
     </head>
     <body>
         <header>
@@ -22,36 +23,77 @@
             </div>
         </header>
         <main>
-            <h2 class="info">Information</h2>
+            <h2 id="info" class="headline-first">Information</h2>
             <br>
-            <div class="info-div">
+            <div class="info-div-1">
                 <img id="info-image" src="public/img1.jpg" alt="Pulp Fiction movie poster">
                 <div id="text-div">
                 <p class="text bold">Pulp Fiction (1994)</p>
                 <p class="text">Director:</p>
-                    <p class="text name indent">Quentin Tarantino</p>
+                    <p class="text name-indent">Quentin Tarantino</p>
                 <p class="text">Writers:</p>
-                    <p class="text name indent">Quentin Tarantino<br>Roger Avary</p>
+                    <p class="text name-indent">Quentin Tarantino<br>Roger Avary</p>
                 <p class="text">Stars:</p>
-                    <p class="text name indent">John Travolta<br>Uma Thurman<br>Samuel L. Jackson</p>
+                    <p class="text name-indent">John Travolta<br>Uma Thurman<br>Samuel L. Jackson</p>
                 </div>
             </div>
             <div class="info-div-2">
                 <p class="text">The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.</p>
             </div>
             <div class="info-div-3">
-                <div>
-                    <p class="text bold2 no-left-padding"><a id="imdb-link" href="https://www.imdb.com/title/tt0110912/">IMDB</a> Rating:</p>
-                    <p class="text center no-left-padding"><i class="fa-solid fa-star" style="color: #eeff00;"></i> 8.9/10</p>
-                </div>
+                    <p class="text bold2 no-left-padding"><a class="link" href="https://www.imdb.com/title/tt0110912/">IMDB</a> Rating:</p>
+                    <p class="text rating no-left-padding"><i class="fa-solid fa-star" style="color: #eeff00;"></i> 8.9/10</p>
             </div>
-            <h2 class="h2-others" id="photo-gallery">Photo Gallery</h2>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <h2 class="h2-others" id="survey">Survey</h2>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h2 class="headline-section" id="photo-gallery">Photo Gallery</h2>
+            <br>
+            <div class="photo-gallery-div">
+                <img class="photo-gallery-image" src="public/photo1.jpg" alt="Samuel L. Jackson and John Travolta as Jules and Vincent, pointing their guns off-screen">
+                <img class="photo-gallery-image" src="public/photo2.jpg" alt="Uma Thurman as Mia, smoking a cigarette">
+                <img class="photo-gallery-image" src="public/photo3.jpg" alt="John Travolta and Uma Thurman as Jules and Mia, dancing together">
+                <img class="photo-gallery-image" src="public/photo4.jpg" alt="Samuel L. Jackson and John Travolta as Jules and Vincent, talking inside a bloody car">
+                <img class="photo-gallery-image" src="public/photo5.jpg" alt="Bruce Willis as Butch, wearing a boxer outfit and gloves">
+                <img class="photo-gallery-image" src="public/photo6.jpg" alt="Uma Thurman and Ving Rhames as Mia and Marsellus, talking at the edge of a swimming pool">
+                <img class="photo-gallery-image" src="public/photo7.jpg" alt="Amanda Plummer and Tim Roth as Honey Bunny and Pumpkin, having a conversation inside a diner">
+                <img class="photo-gallery-image" src="public/photo8.jpg" alt="Harvey Keitel and Quentin Tarantino as The Wolf and Jimmie, sitting facing each other">
+                <img class="photo-gallery-image" src="public/photo9.jpg" alt="Samuel L. Jackson, John Travolta and Harvey Keitel as Jules, Vincent and The Wolf">
+            </div>
+            <h2 class="headline-section" id="survey">Survey</h2>
+            <div class="survey-div">
+                <form method="post" action="#add_link_later">
+                    <fieldset>
+                        <label for="form-name">Name<input id="form-name" type="text" placeholder="Enter your name..." required ></label>
+                        <label for="form-email">Email<input id="form-email" type="email" placeholder="john.doe@example.com" required></label>
+                        <label for="form-age">Age <i>(optional)</i><input id="form-age" type="number"></label>
+                    </fieldset>
+                    <fieldset class="fieldset-margin-top">
+                        <legend>Did you watch Pulp Fiction?</legend>
+                            <label class="label-radio" for="watch-yes"><input id="watch-yes" name="form-watch" type="radio" value="yes" checked><div class="radio-text"> Yes</div></label>
+                            <label class="label-radio" for="watch-no"><input id="watch-no" name="form-watch" type="radio" value="no"><div class="radio-text"> No</div></label>
+                    </fieldset>
+                    <fieldset class="fieldset-margin-top">
+                        <legend>How would you rate Pulp Fiction?</legend>
+                            <select id="form-rating" name="form-rating">
+                                <option value="">Select one</option>
+                                <option value="11">Didn't watch</option>
+                                <option value="1">1 star</option>
+                                <option value="2">2 stars</option>
+                                <option value="3">3 stars</option>
+                                <option value="4">4 stars</option>
+                                <option value="5">5 stars</option>
+                                <option value="6">6 stars</option>
+                                <option value="7">7 stars</option>
+                                <option value="8">8 stars</option>
+                                <option value="9">9 stars</option>
+                                <option value="10">10 stars</option>
+                            </select>
+                    </fieldset>
+                    <input class="submit-button" type="submit" value="Send">
+                </form>
+            </div>
         </main>
         <footer>
-
+            <p>Author: Paweł Świercz</p>
+            <p class="bold2"><a class="link" href="https://github.com/Pawel-Swiercz02">GITHUB</a></p>
         </footer>
     </body>
 </html>

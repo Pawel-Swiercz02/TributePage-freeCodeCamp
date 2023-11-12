@@ -29,7 +29,7 @@ header {
     flex-direction: column;
     margin: 0 auto;
     height:100%;
-    margin-top: 15px;
+    margin-top: 0.9em;
 }
 
 .header-title{
@@ -41,7 +41,7 @@ header {
 nav {
   color: #eeeeee; 
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin: 7px auto 0 auto;
+  margin: 0.45em auto 0 auto;
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -50,8 +50,8 @@ nav {
 nav > a {
     text-decoration: none;
     color: #eeeeee;
-    padding: 4px;
-    border-radius: 2px;
+    padding: 0.25em;
+    border-radius: 0.125em;
 } 
 
 nav > a:hover {
@@ -66,18 +66,21 @@ main {
     font-family:'Courier New', Courier, monospace;
 }
 
-.info {
-    padding-top:5em;
-    border-bottom: 2px solid #2d4059;
+.headline-first, .headline-section {
+    border-bottom: 0.125em solid #2d4059;
 }
 
-.h2-others {
-    padding-top:2em;
-    border-bottom: 2px solid #2d4059;
+.headline-first {
+    padding-top: 5em;
 }
 
-.info-div {
+.headline-section {
+    padding-top: 3.5em;
+}
+
+.info-div-1 {
     display: flex;
+    flex-direction: row;
 }
 
 #info-image {
@@ -91,23 +94,20 @@ main {
 }
 
 .text {
-    padding-left: 13px;
+    padding-left: 0.8em;
     font-family: 'Courier New', Courier, monospace;
     font-size: 1em;
-    margin-top:10px;
+    margin-top: 0.6em;
 }
 
 .text:first-of-type{
-    margin-top:0;
+    margin-top: 0;
 }
 
-.name {
+.name-indent {
     font-style: italic;
-    margin-top:-0.5px;
+    margin-top: 0;
     color: #ff5722; 
-}
-
-.indent {
     margin-left: 0.5em;
 }
 
@@ -117,15 +117,15 @@ main {
 }
 
 .info-div-2 {
-    margin-top: 15px;
+    margin-top: 0.9em;
     text-align: justify;
     word-spacing: -0.1em;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.0125em;
 }
 
 .info-div-3 {
-    margin-top: 25px;
-    text-align: justify;
+    margin-top: 1.6em;
+    text-align: center;
     align-items: center;
 }
 
@@ -133,35 +133,115 @@ main {
         font-weight: bold;
         font-size: 1.2em;
         color: #ff5722;
-        text-align: center;
-}
-
-.center {
-    text-align: center;
-    font-size: 1.5em;
-}
-
-.divider {
-    border: 0.5px solid #2d4059;
-}
-
-#imdb-link {
-    color:#ff5722;
-    text-decoration: none;
-    padding: 4px;
-}
-
-#imdb-link:hover, #imdb-link:visited:hover {
-    color: #2d4059;
-    text-decoration: none;
-    background-color: #ff5722;
-    border-radius: 2px;
-}
-
-#imdb-link:visited {
-    color: #ff5722;
 }
 
 .no-left-padding {
     padding-left: 0;
 }
+
+.rating {  
+    font-size: 1.5em;
+}
+
+.link {
+    color:#ff5722;
+    text-decoration: none;
+    padding: 0.25em;
+    border-radius: 0.125em;
+}
+
+.link:hover{
+    color: #2d4059;
+    background-color: #ff5722; 
+}
+
+.photo-gallery-div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.875em;
+}
+
+.photo-gallery-div::after {
+    content: "";
+    width: 48%;
+}
+
+.photo-gallery-image {
+    width: 48%;
+    border-radius: 0.4em;
+    object-fit: cover;
+}
+
+.survey-div {
+   width: 100%;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 0.625em;
+}
+
+label {
+    display:block;
+    margin-top: 1em;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    height: 1.8em;
+    border: none;
+    border-radius: 0.125em;
+    background-color:#eeeeee;
+    margin-top: 0.2em;
+    padding-left: 0.5em;
+}
+
+input[type="radio"] {
+    width: unset;
+    display: inline;  
+    vertical-align: middle;
+    margin-top: -0.1em;
+}
+
+.label-radio {
+    margin-top: 0.2em;
+}
+
+.radio-text {
+    display: inline;
+}
+
+.fieldset-margin-top {
+    margin-top: 1em;
+}
+
+.submit-button {
+    height: 2em;
+    margin-top: 1.2em;
+    background-color:#ff5722;
+    color: #2d4059;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    height: 4em;
+    margin-top: 3em;
+    padding-top: 0.5em;
+    background-color: #2d4059;
+    color: #eeeeee;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+}
+
