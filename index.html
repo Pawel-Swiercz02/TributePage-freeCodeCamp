@@ -12,7 +12,7 @@
     </head>
     <body>
         <header>
-           <img id="logo-image" src="public/logo.jpg">
+           <img id="logo-image" src="public/logo.jpg" alt="Logo image of an orange camera with a pink background">
            <div class="header-div">
                 <h1 class="header-title">My Favourite Movie</h1>
                 <nav>
@@ -59,7 +59,12 @@
             </div>
             <h2 class="headline-section" id="survey">Survey</h2>
             <div class="survey-div">
-                <form method="post" action="#add_link_later">
+                <script>
+                    function alertBox() {
+                      alert("Survey submitted. Thank you!");
+                    }
+                </script>
+                <form method="post" action="#add_link_later" onsubmit="alertBox(); return false">
                     <fieldset>
                         <label for="form-name">Name<input id="form-name" type="text" placeholder="Enter your name..." required ></label>
                         <label for="form-email">Email<input id="form-email" type="email" placeholder="john.doe@example.com" required></label>
